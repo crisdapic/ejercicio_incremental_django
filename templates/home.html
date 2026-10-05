@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<h1>Bienvenido a la tienda</h1>
+
+<p>Esta es la página principal.</p>
+
+{% if user.is_authenticated %}
+    <p>Has iniciado sesión como {{ user.username }}.</p>
+{% else %}
+    <p>Para gestionar productos y categorías, inicia sesión.</p>
+{% endif %}
+
+{% endblock %}
